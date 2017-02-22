@@ -2,7 +2,7 @@
 
 Mifos X automatic BulkSMS Sending App
 
-* http://github.com/SanjoseSolutions/mifos-messenger
+* https://github.com/EbulkSMS/mifosx-messenger
 
 == Description
 
