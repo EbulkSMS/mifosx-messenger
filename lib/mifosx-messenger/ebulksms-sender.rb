@@ -18,7 +18,7 @@ module MifosXMessenger
 			params['recipients'] = number
 			params['messagetext'] = message
 
-			client = HTTPClient.new(:agent_name => 'MifosWebAppRuby/0.1')
+			client = HTTPClient.new(:agent_name => 'Mifos WebHook/0.1')
 			client.post(@uri, params)
 		end
 	end
