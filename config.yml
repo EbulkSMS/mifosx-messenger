@@ -7,7 +7,7 @@ MessageSender:
   class: EBulkSMSSender
   options:
     uri: 'http://api.ebulksms.com:8080/sendsms'
-    username: # you TBulkSMS customerid
-    apikey: # your TBulkSMS API key
+    username: # you EbulkSMS customerid
+    apikey: # your EbulkSMS API key
     flash: 0
     sender: Mifos
