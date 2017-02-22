@@ -4,11 +4,10 @@ MifosOptions:
   user: mifos
   pass: password
 MessageSender:
-  class: TBulkSMSSender
+  class: EBulkSMSSender
   options:
-    uri: 'http://login.tbulksms.com/API/WebSMS/Http/v1.0a/index.php'
-    userid: # you TBulkSMS customerid
-    password: # your TBulkSMS API key
-    format: json
-    route_id: # your TBulkSMS transactional route id
-    sender: WEBSMS
+    uri: 'http://api.ebulksms.com:8080/sendsms'
+    username: # you TBulkSMS customerid
+    apikey: # your TBulkSMS API key
+    flash: 0
+    sender: Mifos
