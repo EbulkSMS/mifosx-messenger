@@ -17,7 +17,7 @@ savings::withdrawal
 
 MifosX Messenger currently supports sending transactional SMS to any mobile
 number in India including DND and NDNC registered numbers. See http://ndnc.in/
-Currently implements TBulkSMS API transactional messages, but is extensible to
+Currently implements EbulkSMS API transactional messages, but is extensible to
 support other providers as well.
 
 == Features
@@ -36,7 +36,7 @@ Mifos X Messenger installation is now simplified. Just run this command:
 
  $ bundle install
 
-Configure your MifosX and TBulkSMS settings in config.yml
+Configure your MifosX and EbulkSMS settings in config.yml
 
 To test run, type ruby app.rb from the project directory. To deploy, see
 http://recipes.sinatrarb.com/p/deployment
