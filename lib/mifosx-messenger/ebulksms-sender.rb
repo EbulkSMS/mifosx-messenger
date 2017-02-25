@@ -11,6 +11,12 @@ module MifosXMessenger
 			@params = options
 			@params['flash'] ||= 0
 			@params['sender'] ||= 'Mifos SMS'
+			@uri = URI.parse(uri)
+			@client = Net::HTTP.new(@uri.host, @uri.port)
+			if @uri.scheme == 'https'
+				@client.use_ssl = true
+				@client.verify_mode = OpenSSL::SSL::VERIFY_NONE
+			end
 		end
 
 		def send_sms(number, message)
@@ -18,7 +24,6 @@ module MifosXMessenger
 			params['recipients'] = number
 			params['messagetext'] = message
 
-			client = HTTPClient.new(:agent_name => 'Mifos WebHook/0.1')
 			querystr = params.map{|k,v|k+'='+v.to_s}.join('&')
 			res = @client.request_get(@uri.request_uri + '?' + querystr)
 			puts "SMS Request Sent. Response: " + res.body
