@@ -11,3 +11,4 @@ MessageSender:
     apikey: # your EbulkSMS API key
     flash: 0
     sender: Mifos
+MessageSignature: ' - Regards, MxMessenger'
