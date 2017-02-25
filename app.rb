@@ -1,9 +1,11 @@
+require "sinatra"
+require "sinatra/config_file"
 config_file 'config.yml'
 require_relative 'lib/mifosx-messenger'
 
 helpers do
 	def request_header(h)
-		env["HTTP_"+h.upcase.gsub('-','_')]
+		env["HTTP_"+h.upcase.gsub("MIFOS","FINERACT").gsub('-','_')]
 	end
 end
 
