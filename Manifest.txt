@@ -5,6 +5,7 @@ README.rdoc
 Rakefile
 app.rb
 lib/mifosx-messenger.rb
+lib/mifosx-messenger/ebulksms-sender.rb
 lib/mifosx-messenger/tbulksms-sender.rb
 lib/mifosx-messenger/message-sender.rb
 lib/mifosx-messenger/message-templates.rb
