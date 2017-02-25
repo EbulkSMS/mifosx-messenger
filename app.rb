@@ -18,7 +18,8 @@ post '/' do
 	action = request_header("X-Mifos-Action")
 
 	if request.body.size > 0
-		data = JSON.parse(request.body.string)
+		request.body.rewind
+		data = JSON.parse(request.body.read)
 	end
 
 	if entity
