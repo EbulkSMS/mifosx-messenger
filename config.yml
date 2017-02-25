@@ -1,14 +1,14 @@
 MifosOptions:
-  baseUrl: 'https://demo.openmf.org/mifosng-provider/api/v1'
+  baseUrl: 'https://localhost/fineract-provider/api/v1'
   tenantId: default
-  user: mifos
-  pass: password
+  user: root
+  pass: Admin123
 MessageSender:
   class: EBulkSMSSender
   options:
     uri: 'http://api.ebulksms.com:8080/sendsms'
-    username: # you EbulkSMS customerid
+    username: # you EbulkSMS username / email address
     apikey: # your EbulkSMS API key
     flash: 0
     sender: Mifos
-MessageSignature: ' - Regards, MxMessenger'
+MessageSignature: '- Regards, MxMessenger'
