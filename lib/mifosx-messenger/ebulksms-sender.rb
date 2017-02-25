@@ -19,7 +19,9 @@ module MifosXMessenger
 			params['messagetext'] = message
 
 			client = HTTPClient.new(:agent_name => 'Mifos WebHook/0.1')
-			client.post(@uri, params)
+			querystr = params.map{|k,v|k+'='+v.to_s}.join('&')
+			res = @client.request_get(@uri.request_uri + '?' + querystr)
+			puts "SMS Request Sent. Response: " + res.body
 		end
 	end
 end
