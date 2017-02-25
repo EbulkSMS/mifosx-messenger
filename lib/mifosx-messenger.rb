@@ -6,7 +6,7 @@ module MifosXMessenger
 end
 
 require_relative 'mifosx-messenger/mifosx-helper'
+require_relative 'mifosx-messenger/ebulksms-sender'
 require_relative 'mifosx-messenger/tbulksms-sender'
 require_relative 'mifosx-messenger/mvaayoo-sender'
-require_relative 'mifosx-messenger/ebulksms-sender'
 require_relative 'mifosx-messenger/message-templates'
