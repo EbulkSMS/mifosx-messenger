@@ -5,9 +5,10 @@ module MifosXMessenger
 	class EBulkSMSSender < MessageSender
 		@uri = nil
 		@params = nil
+		@client = nil
 
 		def initialize(options = {})
-			@uri = options['uri'] || 'http://api.ebulksms.com:8080/sendsms'
+			uri = options['uri'] || 'http://api.ebulksms.com:8080/sendsms'
 			@params = options
 			@params['flash'] ||= 0
 			@params['sender'] ||= 'Mifos SMS'
