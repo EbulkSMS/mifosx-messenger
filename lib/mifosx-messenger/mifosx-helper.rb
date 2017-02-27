@@ -31,8 +31,9 @@ module MifosXMessenger
 
 		def get_entity(path, options = {})
 			path = URI.join(@baseUrl, path).path
+			path += '?tenantIdentifier='+@headers['Fineract-Platform-TenantId']
 			if fields = options[:fields]
-				path += '?fields='+fields.join(',')
+				path += '&fields='+fields.join(',')
 			end
 			res = @http.request_get(path, @headers)
 			if 'application/json' == res['content-type']
