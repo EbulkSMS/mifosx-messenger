@@ -24,9 +24,10 @@ module MifosXMessenger
 			params = @params
 			params['recipients'] = number
 			params['messagetext'] = message
+			params.delete('uri')
 
 			querystr = params.map{|k,v|k+'='+v.to_s}.join('&')
-			res = @client.request_get(@uri.request_uri + '?' + querystr)
+                        res = @client.request_get(@uri.request_uri + '?' + URI::escape(querystr))
 			puts "SMS Request Sent. Response: " + res.body
 		end
 	end
